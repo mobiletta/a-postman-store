@@ -1,0 +1,64 @@
+{
+  "info": {
+    "_postman_id": "223fd9b4-8472-5e23-048f-ec7d45a6d0a0",
+    "name": "Azure-Experimental",
+    "description": "Investigation of various Azure API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "_postman_id": "5e367efe-fc2f-aa07-ee30-59a96ab3c2f7",
+      "name": "POST - Azure Function",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"first\": \"Azure\",\n    \"last\": \"Functions\"\n}\n"
+        },
+        "url": {
+          "raw": "https://m1xtestfunctions.azurewebsites.net/api/OnRequestReceived?code=3SQHZIJ7k1yGzVdXPBXEaLqefmlbExAp5c4LPyjbIF7XDtFMcoma5A==&clientId=default",
+          "protocol": "https",
+          "host": [
+            "m1xtestfunctions",
+            "azurewebsites",
+            "net"
+          ],
+          "path": [
+            "api",
+            "OnRequestReceived"
+          ],
+          "query": [
+            {
+              "key": "code",
+              "value": "3SQHZIJ7k1yGzVdXPBXEaLqefmlbExAp5c4LPyjbIF7XDtFMcoma5A==",
+              "equals": true
+            },
+            {
+              "key": "clientId",
+              "value": "default",
+              "equals": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "e005e8ef-9ca9-6970-ae7f-844f0d03888e",
+      "name": "HomePage-Posh-Created-AzureVM-WebServer",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": ""
+      },
+      "response": []
+    }
+  ]
+}
