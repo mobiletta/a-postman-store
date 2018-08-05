@@ -7,12 +7,6 @@
   },
   "item": [
     {
-      "_postman_id": "deed981c-1467-4302-90e0-5b7f1002b0f2",
-      "name": "AzureFunctionsPOC",
-      "description": "",
-      "item": []
-    },
-    {
       "_postman_id": "5e367efe-fc2f-aa07-ee30-59a96ab3c2f7",
       "name": "POST - Azure Function",
       "request": {
