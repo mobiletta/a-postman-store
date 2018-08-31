@@ -289,6 +289,7 @@
     "IgnoreIfNullJson": false,
     "DisableLinting": false,
     "SortResources": false,
+    "AllowSkippingSSLCertVerification": false,
     "ApplyCustomizations": []
   },
   "Errors": [],
