@@ -7,8 +7,8 @@
   },
   "item": [
     {
-      "_postman_id": "1842693-5e367efe-fc2f-aa07-ee30-59a96ab3c2f7",
       "name": "POST - Azure Function",
+      "_postman_id": "1842693-5e367efe-fc2f-aa07-ee30-59a96ab3c2f7",
       "request": {
         "method": "POST",
         "header": [
@@ -36,13 +36,11 @@
           "query": [
             {
               "key": "code",
-              "value": "3SQHZIJ7k1yGzVdXPBXEaLqefmlbExAp5c4LPyjbIF7XDtFMcoma5A==",
-              "equals": true
+              "value": "3SQHZIJ7k1yGzVdXPBXEaLqefmlbExAp5c4LPyjbIF7XDtFMcoma5A=="
             },
             {
               "key": "clientId",
-              "value": "default",
-              "equals": true
+              "value": "default"
             }
           ]
         }
@@ -50,12 +48,15 @@
       "response": []
     },
     {
-      "_postman_id": "1842693-e005e8ef-9ca9-6970-ae7f-844f0d03888e",
       "name": "HomePage-Posh-Created-AzureVM-WebServer",
+      "_postman_id": "1842693-e005e8ef-9ca9-6970-ae7f-844f0d03888e",
       "request": {
         "method": "GET",
         "header": [],
-        "body": {},
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
         "url": ""
       },
       "response": []
