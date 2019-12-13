@@ -11,10 +11,6 @@
           {
             "Name": "Server 1",
             "Url": "https://m1xtestfunctions.azurewebsites.net/api"
-          },
-          {
-            "Name": "Server 2",
-            "Url": "https:"
           }
         ]
       }
@@ -39,7 +35,6 @@
       "HTTPMethod": "POST",
       "Group": "Misc",
       "RequiresAuthentication": true,
-      "Server": "Server 1",
       "Route": "/OnRequestReceived",
       "Response": {
         "Optional": false,
@@ -174,8 +169,7 @@
       "HTTPMethod": "GET",
       "Group": "Misc",
       "RequiresAuthentication": true,
-      "Server": "Server 2",
-      "Route": "//",
+      "Route": "/",
       "Response": {
         "Optional": false,
         "Type": "Void",
