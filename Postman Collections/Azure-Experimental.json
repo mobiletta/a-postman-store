@@ -31,7 +31,6 @@
   "Endpoints": [
     {
       "Name": "POST - Azure Function",
-      "Description": "TODO: Add Description",
       "HTTPMethod": "POST",
       "Group": "Misc",
       "RequiresAuthentication": true,
@@ -126,7 +125,6 @@
       "TestCases": [
         {
           "Name": "POST - Azure Function",
-          "Description": "TODO: Add Description",
           "Enabled": true,
           "ShouldPass": true,
           "InputParameters": [
@@ -161,11 +159,12 @@
         }
       ],
       "WrapBodyInObject": false,
-      "Deprecated": false
+      "Deprecated": false,
+      "XmlRequest": false,
+      "XmlResponse": false
     },
     {
       "Name": "HomePage-Posh-Created-AzureVM-WebServer",
-      "Description": "TODO: Add Description",
       "HTTPMethod": "GET",
       "Group": "Misc",
       "RequiresAuthentication": true,
@@ -191,7 +190,6 @@
       "TestCases": [
         {
           "Name": "HomePage-Posh-Created-AzureVM-WebServer",
-          "Description": "TODO: Add Description",
           "Enabled": true,
           "ShouldPass": true,
           "InputParameters": [],
@@ -205,7 +203,9 @@
         }
       ],
       "WrapBodyInObject": false,
-      "Deprecated": false
+      "Deprecated": false,
+      "XmlRequest": false,
+      "XmlResponse": false
     }
   ],
   "EndpointGroups": [
