@@ -33,6 +33,7 @@
       "Name": "POST - Azure Function",
       "HTTPMethod": "POST",
       "Group": "Misc",
+      "RequestContentType": "application/json",
       "RequiresAuthentication": true,
       "Route": "/OnRequestReceived",
       "Response": {
