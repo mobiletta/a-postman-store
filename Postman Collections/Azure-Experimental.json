@@ -36,6 +36,7 @@
       "RequestContentType": "application/json",
       "RequiresAuthentication": true,
       "Route": "/OnRequestReceived",
+      "Responses": {},
       "Response": {
         "Optional": false,
         "Type": "Void",
@@ -170,6 +171,7 @@
       "Group": "Misc",
       "RequiresAuthentication": true,
       "Route": "/",
+      "Responses": {},
       "Response": {
         "Optional": false,
         "Type": "Void",
@@ -257,6 +259,7 @@
       "Deprecated": false
     }
   ],
+  "UserDefinedImportedTypes": [],
   "CodeGenSettings": {
     "SynchronyMode": "Asynchronous",
     "ModelSerializationScheme": "Json",
