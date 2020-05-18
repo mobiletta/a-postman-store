@@ -1,65 +1,357 @@
 {
-  "info": {
-    "_postman_id": "1842693-223fd9b4-8472-5e23-048f-ec7d45a6d0a0",
-    "name": "Azure-Experimental",
-    "description": "Investigation of various Azure API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
-  },
-  "item": [
-    {
-      "name": "POST - Azure Function",
-      "_postman_id": "1842693-5e367efe-fc2f-aa07-ee30-59a96ab3c2f7",
-      "request": {
-        "method": "POST",
-        "header": [
+  "Name": "Azure-Experimental",
+  "BaseUri": "https://m1xtestfunctions.azurewebsites.net/api",
+  "ServerConfiguration": {
+    "DefaultEnvironment": "production",
+    "DefaultServer": "Server 1",
+    "Environments": [
+      {
+        "Name": "production",
+        "Servers": [
           {
-            "key": "Content-Type",
-            "value": "application/json"
+            "Name": "Server 1",
+            "Url": "https://m1xtestfunctions.azurewebsites.net/api"
           }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"first\": \"Azure\",\n    \"last\": \"Functions\"\n}\n"
+        ]
+      }
+    ],
+    "Parameters": []
+  },
+  "Description": "Investigation of various Azure API",
+  "Version": "1.0",
+  "Contact": {},
+  "AdditionalHeaders": [],
+  "Authentication": {
+    "Type": "None",
+    "AuthType": "None",
+    "Parameters": [],
+    "Scopes": [],
+    "ParamFormats": {}
+  },
+  "Endpoints": [
+    {
+      "Name": "POST - Azure Function",
+      "HTTPMethod": "POST",
+      "Group": "Misc",
+      "RequestContentType": "application/json",
+      "RequiresAuthentication": true,
+      "Route": "/OnRequestReceived",
+      "Responses": {},
+      "Response": {
+        "Optional": false,
+        "Type": "Void",
+        "IsSdlNativeType": true,
+        "Constant": false,
+        "IsStream": false,
+        "IsAttribute": false,
+        "Nullable": false,
+        "IsArray": false,
+        "IsMap": false,
+        "Deprecated": false,
+        "Name": "Response"
+      },
+      "HasOptionalQueryParams": false,
+      "HasOptionalFieldParams": false,
+      "CollectParameters": false,
+      "Parameters": [
+        {
+          "ParamFormat": "Query",
+          "Optional": false,
+          "Type": "String",
+          "IsSdlNativeType": true,
+          "Constant": false,
+          "IsStream": false,
+          "IsAttribute": false,
+          "Example": "3SQHZIJ7k1yGzVdXPBXEaLqefmlbExAp5c4LPyjbIF7XDtFMcoma5A==",
+          "Nullable": false,
+          "IsArray": false,
+          "IsMap": false,
+          "Deprecated": false,
+          "Name": "code",
+          "Description": "",
+          "DefaultValue": ""
         },
-        "url": {
-          "raw": "https://m1xtestfunctions.azurewebsites.net/api/OnRequestReceived?code=3SQHZIJ7k1yGzVdXPBXEaLqefmlbExAp5c4LPyjbIF7XDtFMcoma5A==&clientId=default",
-          "protocol": "https",
-          "host": [
-            "m1xtestfunctions",
-            "azurewebsites",
-            "net"
-          ],
-          "path": [
-            "api",
-            "OnRequestReceived"
-          ],
-          "query": [
+        {
+          "ParamFormat": "Query",
+          "Optional": false,
+          "Type": "String",
+          "IsSdlNativeType": true,
+          "Constant": false,
+          "IsStream": false,
+          "IsAttribute": false,
+          "Example": "default",
+          "Nullable": false,
+          "IsArray": false,
+          "IsMap": false,
+          "Deprecated": false,
+          "Name": "clientId",
+          "Description": "",
+          "DefaultValue": ""
+        },
+        {
+          "ParamFormat": "Header",
+          "Optional": false,
+          "Type": "String",
+          "IsSdlNativeType": true,
+          "Constant": false,
+          "IsStream": false,
+          "IsAttribute": false,
+          "Example": "application/json",
+          "Nullable": false,
+          "IsArray": false,
+          "IsMap": false,
+          "Deprecated": false,
+          "Name": "Content-Type",
+          "Description": "",
+          "DefaultValue": ""
+        },
+        {
+          "ParamFormat": "Body",
+          "Optional": false,
+          "Type": "POST - Azure Function Request",
+          "IsSdlNativeType": false,
+          "Constant": false,
+          "IsStream": false,
+          "IsAttribute": false,
+          "Example": "{\r\n  \"first\": \"Azure\",\r\n  \"last\": \"Functions\"\r\n}",
+          "Nullable": false,
+          "IsArray": false,
+          "IsMap": false,
+          "Deprecated": false,
+          "Name": "Body",
+          "Description": "",
+          "DefaultValue": ""
+        }
+      ],
+      "Errors": [],
+      "TestCases": [
+        {
+          "Name": "POST - Azure Function",
+          "Enabled": true,
+          "ShouldPass": true,
+          "InputParameters": [
             {
-              "key": "code",
-              "value": "3SQHZIJ7k1yGzVdXPBXEaLqefmlbExAp5c4LPyjbIF7XDtFMcoma5A=="
+              "IsNull": false,
+              "Name": "code",
+              "Value": "3SQHZIJ7k1yGzVdXPBXEaLqefmlbExAp5c4LPyjbIF7XDtFMcoma5A=="
             },
             {
-              "key": "clientId",
-              "value": "default"
+              "IsNull": false,
+              "Name": "clientId",
+              "Value": "default"
+            },
+            {
+              "IsNull": false,
+              "Name": "Content-Type",
+              "Value": "application/json"
+            },
+            {
+              "IsNull": false,
+              "Name": "Body",
+              "Value": "{\r\n  \"first\": \"Azure\",\r\n  \"last\": \"Functions\"\r\n}"
             }
-          ]
+          ],
+          "ExpectedStatus": "200",
+          "ExpectedHeaders": [],
+          "ExpectedHeadersAllowExtra": true,
+          "ExpectedBodyMatchMode": "NONE",
+          "ExpectedArrayOrderedMatching": false,
+          "ExpectedArrayCheckCount": false,
+          "ResponseMatchSchema": true
         }
-      },
-      "response": []
+      ],
+      "WrapBodyInObject": false,
+      "Deprecated": false,
+      "XmlRequest": false,
+      "XmlResponse": false
     },
     {
-      "name": "HomePage-Posh-Created-AzureVM-WebServer",
-      "_postman_id": "1842693-e005e8ef-9ca9-6970-ae7f-844f0d03888e",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "body": {
-          "mode": "formdata",
-          "formdata": []
-        },
-        "url": ""
+      "Name": "HomePage-Posh-Created-AzureVM-WebServer",
+      "HTTPMethod": "GET",
+      "Group": "Misc",
+      "RequiresAuthentication": true,
+      "Route": "/",
+      "Responses": {},
+      "Response": {
+        "Optional": false,
+        "Type": "Void",
+        "IsSdlNativeType": true,
+        "Constant": false,
+        "IsStream": false,
+        "IsAttribute": false,
+        "Nullable": false,
+        "IsArray": false,
+        "IsMap": false,
+        "Deprecated": false,
+        "Name": "Response"
       },
-      "response": []
+      "HasOptionalQueryParams": false,
+      "HasOptionalFieldParams": false,
+      "CollectParameters": false,
+      "Parameters": [],
+      "Errors": [],
+      "TestCases": [
+        {
+          "Name": "HomePage-Posh-Created-AzureVM-WebServer",
+          "Enabled": true,
+          "ShouldPass": true,
+          "InputParameters": [],
+          "ExpectedStatus": "200",
+          "ExpectedHeaders": [],
+          "ExpectedHeadersAllowExtra": true,
+          "ExpectedBodyMatchMode": "NONE",
+          "ExpectedArrayOrderedMatching": false,
+          "ExpectedArrayCheckCount": false,
+          "ResponseMatchSchema": true
+        }
+      ],
+      "WrapBodyInObject": false,
+      "Deprecated": false,
+      "XmlRequest": false,
+      "XmlResponse": false
     }
-  ]
+  ],
+  "EndpointGroups": [
+    {
+      "Name": "Misc",
+      "Description": ""
+    }
+  ],
+  "CustomTypes": [
+    {
+      "Name": "POST - Azure Function Request",
+      "ImplementationType": "Structure",
+      "Fields": [
+        {
+          "Optional": false,
+          "Type": "String",
+          "IsSdlNativeType": true,
+          "Constant": false,
+          "IsStream": false,
+          "IsAttribute": false,
+          "Attributes": {},
+          "Nullable": false,
+          "IsArray": false,
+          "IsMap": false,
+          "Deprecated": false,
+          "Name": "first",
+          "Description": "",
+          "DefaultValue": ""
+        },
+        {
+          "Optional": false,
+          "Type": "String",
+          "IsSdlNativeType": true,
+          "Constant": false,
+          "IsStream": false,
+          "IsAttribute": false,
+          "Attributes": {},
+          "Nullable": false,
+          "IsArray": false,
+          "IsMap": false,
+          "Deprecated": false,
+          "Name": "last",
+          "Description": "",
+          "DefaultValue": ""
+        }
+      ],
+      "ExampleValue": "{\"first\":\"Azure\",\"last\":\"Functions\"}",
+      "Deprecated": false
+    }
+  ],
+  "UserDefinedImportedTypes": [],
+  "CodeGenSettings": {
+    "SynchronyMode": "Asynchronous",
+    "ModelSerializationScheme": "Json",
+    "ArraySerialization": "Indexed",
+    "Nullify404": false,
+    "UseHttpMethodPrefix": true,
+    "UseModelPrefix": false,
+    "UseExceptionPrefix": true,
+    "UseEnumPrefix": true,
+    "UseControllerPrefix": true,
+    "UseConstructorsForConfig": false,
+    "Timeout": 0.0,
+    "AndroidUseAppManifest": false,
+    "iOSUseAppInfoPlist": false,
+    "iOSGenerateCoreData": false,
+    "CollapseParamsToArray": false,
+    "RunscopeEnabled": false,
+    "AndroidHttpClient": "ANDROID_OK",
+    "JavaHttpClient": "JAVA_OK",
+    "ObjCHttpClient": "UNIREST",
+    "CSharpHttpClient": "UNIREST",
+    "NodeHttpClient": "NODE_REQUEST",
+    "JavaUsePropertiesConfig": false,
+    "PHPHttpClient": "UNIREST",
+    "EnablePHPComposerVersionString": false,
+    "EnableGlobalUserAgent": true,
+    "EnableAdditionalModelProperties": false,
+    "PreserveParameterOrder": true,
+    "ValidateRequiredParameters": false,
+    "AppendContentHeaders": true,
+    "GenerateInterfaces": false,
+    "UseCommonSDKLibrary": false,
+    "ParameterArrayFormat": "ParamArrayWithIndex",
+    "SecurityProtocols": [
+      "Ssl3",
+      "Tls"
+    ],
+    "GenerateTravisConfig": false,
+    "GenerateCircleConfig": false,
+    "GenerateAppveyorConfig": false,
+    "GenerateJenkinsConfig": false,
+    "EnableLogging": false,
+    "EnableHttpCache": false,
+    "Retries": 0,
+    "RetryInterval": 1.0,
+    "BackoffFactor": 0.0,
+    "UserConfigurableRetries": true,
+    "GenerateAdvancedDocs": true,
+    "DisableDocs": false,
+    "StoreTimezoneInformation": false,
+    "UnderscoreNumbers": true,
+    "UseSingletonPattern": true,
+    "IgnoreIfNullJson": false,
+    "DisableLinting": false,
+    "SortResources": false,
+    "LiftParameterDescriptionFromCustomType": false,
+    "AllowSkippingSSLCertVerification": false,
+    "ApplyCustomizations": [],
+    "DoNotSplitWords": [],
+    "ReturnCompleteHttpResponse": false,
+    "ThrowForHttpErrorStatusCodes": true,
+    "GenerateModels": true,
+    "GenerateEnums": true,
+    "GenerateExceptions": true,
+    "ResponseMapping": {
+      "Type": "Simple"
+    },
+    "ForceKeywordArgsInRuby": false,
+    "SymbolizeHashKeysInRuby": false,
+    "UsageExampleEndpoint": {
+      "Description": "",
+      "EndpointGroupName": "",
+      "EndpointName": ""
+    },
+    "IsLatestVersion": false,
+    "EnableImmutableModels": false,
+    "UseEndpointMethodName": false,
+    "EncodeTemplateParameters": true
+  },
+  "Errors": [],
+  "TestGenSettings": {
+    "Configuration": {},
+    "TestTimeout": 30,
+    "PrecisionDelta": 0.01
+  },
+  "ExportSettings": {
+    "ExportExtensions": false,
+    "UseDateTimeOnlyInRaml": false,
+    "SetPostmanParamValuesAsVariables": false,
+    "WrapResponseFieldInWsdl": true,
+    "AllowEmptyTypeAttributesInXsd": false,
+    "WrapInputOutputTypesInElementInXsd": false,
+    "AddRefSiblingDataInAllOfSchema": false
+  }
 }
